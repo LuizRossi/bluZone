@@ -41,7 +41,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="Anexe as fotos que comprovem a irregularidade"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -53,7 +53,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="80dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -86,6 +86,40 @@
         android:layout_marginTop="40dp"
         android:layout_marginStart="80dp"/>
 
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Marque para confirmar a irregularidade"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/checkProibido"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="start"
+        android:layout_marginLeft="30dp"
+        android:text="Proibido/Inadequado"/>
+
+    <CheckBox
+        android:id="@+id/checkInvalido"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="-50dp"
+        android:layout_marginRight="30dp"
+        android:text="Ticket Inválido"/>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/enviarBtn"
         android:background="@color/black"
@@ -101,7 +135,6 @@
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/logotipo"/>
-
 </androidx.appcompat.widget.LinearLayoutCompat>

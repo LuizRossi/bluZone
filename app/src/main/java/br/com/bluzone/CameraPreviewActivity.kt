@@ -127,4 +127,10 @@ class CameraPreviewActivity : AppCompatActivity() {
         }, 100)
     }
 
+ /*   public byte[] convertImageViewToByteArray(ImageView image){
+        Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+        return stream.toByteArray();
+    }*/
 }

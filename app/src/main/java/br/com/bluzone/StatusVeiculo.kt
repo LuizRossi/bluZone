@@ -96,7 +96,9 @@ class StatusVeiculo : AppCompatActivity() {
         val telaHome = Intent(this, MainActivity::class.java)
         startActivity(telaHome)
     }
+    fun validaPlaca(){
 
+    }
 
 }
 
