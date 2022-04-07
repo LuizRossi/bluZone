@@ -1,8 +1,10 @@
 package br.com.bluzone
 
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import br.com.bluzone.databinding.ActivityMainBinding
 import br.com.bluzone.databinding.ActivityStatusveiculoBinding
 
@@ -22,10 +24,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private val networkChecker by lazy {
+        NetworkChecker(ContextCompat.getSystemService(this, ConnectivityManager::class.java))
+    }
+
+
+
     private fun abrirTelaConsulta(){
         //navegar pra activity de tela de consulta
-        val intentTelaConsulta = Intent(this, StatusVeiculo::class.java)
-        startActivity(intentTelaConsulta)
+        networkChecker.performActionIfConnectec {
+            val intentTelaConsulta = Intent(this, StatusVeiculo::class.java)
+            startActivity(intentTelaConsulta)
+        }
 
     }
+}
 }
