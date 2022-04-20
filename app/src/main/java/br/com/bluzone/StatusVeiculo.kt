@@ -9,6 +9,10 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.functions.FirebaseFunctions
+import com.google.firebase.functions.ktx.functions
+import com.google.firebase.ktx.Firebase
+import com.google.gson.GsonBuilder
 
 class StatusVeiculo : AppCompatActivity() {
 
@@ -18,8 +22,13 @@ class StatusVeiculo : AppCompatActivity() {
     private lateinit var registraBtn: AppCompatButton
     private lateinit var backBtn: AppCompatButton
     private lateinit var homeBtn: AppCompatButton
+    private lateinit var functions: FirebaseFunctions
+
+    // instanciando um objeto gson
+    private val gson = GsonBuilder().enableComplexMapKeySerialization().create()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        functions = Firebase.functions("southamerica-east1")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_statusveiculo)
         //setTitle(R.string.activity_status_veiculo_title)
@@ -65,7 +74,9 @@ class StatusVeiculo : AppCompatActivity() {
 
 
     }
+    private fun consultaVeiculo(){
 
+    }
     //função da tela de consulta do veículo
     private fun verificarStatus() {
         if (etPlaca.text.isNullOrEmpty()) {
